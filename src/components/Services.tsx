@@ -3,93 +3,77 @@ import {
   Smartphone,
   GraduationCap,
   Users,
-  Truck,
-  Package,
-  Globe,
-  TrendingUp,
+  ShoppingCart,
+  Globe2,
 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-const itServices = [
+const getItServices = (t: (key: string) => string) => [
   {
     icon: Code2,
-    title: 'Web Development',
-    description: 'Custom web applications built with modern technologies for optimal performance and user experience.',
+    title: t('services.it.webDev.title'),
+    description: t('services.it.webDev.description'),
   },
   {
     icon: Smartphone,
-    title: 'Mobile App Development',
-    description: 'Native and cross-platform mobile solutions that engage users and drive business growth.',
+    title: t('services.it.mobileDev.title'),
+    description: t('services.it.mobileDev.description'),
   },
   {
     icon: GraduationCap,
-    title: 'Career Mentoring',
-    description: 'Professional guidance and mentorship to help individuals advance their tech careers.',
+    title: t('services.it.mentoring.title'),
+    description: t('services.it.mentoring.description'),
   },
   {
     icon: Users,
-    title: 'Teaching & Training',
-    description: 'Comprehensive training programs in cutting-edge technologies and best practices.',
+    title: t('services.it.training.title'),
+    description: t('services.it.training.description'),
   },
 ];
 
-const logisticsServices = [
-  {
-    icon: Truck,
-    title: 'Transportation Services',
-    description: 'Reliable and efficient transportation solutions for domestic and international shipping.',
-  },
-  {
-    icon: Package,
-    title: 'Warehousing',
-    description: 'Secure storage facilities with advanced inventory management systems.',
-  },
-];
 
-const tradeServices = [
+const getEcommerceServices = (t: (key: string) => string) => [
   {
-    icon: Globe,
-    title: 'International Trade',
-    description: 'Facilitating global trade operations with expertise in import and export regulations.',
+    icon: ShoppingCart,
+    title: t('services.ecommerce.intermediary.title'),
+    description: t('services.ecommerce.intermediary.description'),
   },
   {
-    icon: TrendingUp,
-    title: 'Trade Consulting',
-    description: 'Strategic consulting services to optimize your international trade operations.',
+    icon: Globe2,
+    title: t('services.ecommerce.crossBorder.title'),
+    description: t('services.ecommerce.crossBorder.description'),
   },
 ];
 
 export default function Services() {
+  const { t, isRTL } = useLanguage();
+  const itServices = getItServices(t);
+  const ecommerceServices = getEcommerceServices(t);
+
   return (
-    <section id="services" className="py-24 bg-gray-50">
+    <section id="services" className="py-24 bg-gray-50" dir={isRTL ? 'rtl' : 'ltr'}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our Services
+            {t('services.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive solutions across IT, logistics, and trade to power your business growth
+            {t('services.subtitle')}
           </p>
         </div>
 
         <div className="space-y-20">
           <ServiceCategory
-            title="IT & Technology Solutions"
-            description="Cutting-edge technology services to transform your digital presence"
+            title={t('services.it.title')}
+            description={t('services.it.subtitle')}
             services={itServices}
             color="blue"
           />
 
           <ServiceCategory
-            title="Logistics Services"
-            description="Streamlined logistics solutions for seamless operations"
-            services={logisticsServices}
-            color="green"
-          />
-
-          <ServiceCategory
-            title="Trade Services"
-            description="Expert trade services connecting you to global markets"
-            services={tradeServices}
+            title={t('services.ecommerce.title')}
+            description={t('services.ecommerce.subtitle')}
+            services={ecommerceServices}
             color="cyan"
           />
         </div>

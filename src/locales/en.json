@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Your Trusted Service Partner",
+    "welcome": "Welcome to",
+    "companyName": "iBTIKAR IT SOLUTIONS",
+    "subtitle": "Delivering Excellence in IT Solutions and e-commerce Logistics Services",
+    "exploreServices": "Explore Services",
+    "getInTouch": "Get in Touch",
+    "stats": {
+      "projects": "Projects Completed",
+      "years": "Years Experience",
+      "clients": "Happy Clients",
+      "support": "Support Available"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive IT solutions and specialized e-commerce logistics services to power your business growth",
+    "it": {
+      "title": "IT & Technology Solutions",
+      "subtitle": "Cutting-edge technology services to transform your digital presence",
+      "webDev": {
+        "title": "Web Development",
+        "description": "Custom web applications built with modern technologies for optimal performance and user experience."
+      },
+      "mobileDev": {
+        "title": "Mobile App Development",
+        "description": "Native and cross-platform mobile solutions that engage users and drive business growth."
+      },
+      "mentoring": {
+        "title": "Career Mentoring",
+        "description": "Professional guidance and mentorship to help individuals advance their tech careers."
+      },
+      "training": {
+        "title": "Teaching & Training",
+        "description": "Comprehensive training programs in cutting-edge technologies and best practices."
+      }
+    },
+    "ecommerce": {
+      "title": "E-commerce Logistics",
+      "subtitle": "Connecting Mauritanian customers to global e-commerce platforms",
+      "intermediary": {
+        "title": "E-commerce Intermediary",
+        "description": "Bridge between Mauritanian customers and global platforms like Amazon, AliExpress, and Alibaba."
+      },
+      "crossBorder": {
+        "title": "Cross-border Shopping",
+        "description": "Facilitate international purchases with local payment methods and delivery to Mauritania."
+      }
+    }
+  },
+  "about": {
+    "title": "About iBTIKAR IT SOLUTIONS",
+    "subtitle": "A specialized service provider delivering excellence in IT solutions and e-commerce logistics. We combine technical expertise with innovative approaches to help businesses and individuals thrive in the digital economy, with a special focus on connecting Mauritanian customers to global e-commerce platforms.",
+    "features": {
+      "mission": {
+        "title": "Mission-Driven",
+        "description": "Committed to delivering exceptional value and building long-term partnerships with our clients."
+      },
+      "excellence": {
+        "title": "Industry Excellence",
+        "description": "Recognized for our expertise and consistent delivery of high-quality services across all sectors."
+      },
+      "trust": {
+        "title": "Trusted Partner",
+        "description": "Building trust through transparency, reliability, and unwavering commitment to client success."
+      },
+      "innovation": {
+        "title": "Innovation First",
+        "description": "Leveraging cutting-edge technologies and innovative approaches to solve complex challenges."
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us?",
+      "subtitle": "We stand out in the industry by combining deep expertise in IT solutions and specialized e-commerce logistics with a genuine commitment to client success. Our focused approach allows us to deliver targeted solutions that drive real business results, especially for Mauritanian customers seeking access to global e-commerce platforms like Amazon, AliExpress, and Alibaba.",
+      "benefits": [
+        "Specialized expertise in IT solutions and e-commerce logistics",
+        "Experienced team of professionals with proven track records",
+        "Customer-centric approach with 24/7 support",
+        "Competitive pricing without compromising quality",
+        "Local expertise connecting Mauritanian customers to global e-commerce platforms",
+        "Agile methodologies and rapid delivery"
+      ]
+    },
+    "stats": {
+      "years": "Years in Business",
+      "projects": "Projects Delivered",
+      "clients": "Happy Clients",
+      "support": "Support Available"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to transform your business? Contact us today and let's discuss how we can help you achieve your goals.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "service": "Service Interested In",
+      "message": "Message",
+      "required": "*",
+      "selectService": "Select a service",
+      "sendMessage": "Send Message",
+      "sending": "Sending...",
+      "thankYou": "Thank You!",
+      "successMessage": "Your message has been received. We'll get back to you shortly.",
+      "services": {
+        "webDev": "Web Development",
+        "mobileDev": "Mobile App Development",
+        "mentoring": "Career Mentoring",
+        "training": "Teaching & Training",
+        "ecommerceIntermediary": "E-commerce Intermediary",
+        "crossBorderShopping": "Cross-border Shopping",
+        "other": "Other"
+      },
+      "validation": {
+        "nameRequired": "Full Name is required",
+        "emailRequired": "Email Address is required",
+        "emailInvalid": "Please enter a valid email address",
+        "serviceRequired": "Please select a service",
+        "messageRequired": "Message is required"
+      }
+    },
+    "info": {
+      "email": {
+        "title": "Email Us",
+        "subtitle": "We'll respond within 24 hours"
+      },
+      "phone": {
+        "title": "Call Us",
+        "subtitle": "Mon-Fri, 9am-6pm EST"
+      },
+      "location": {
+        "title": "Visit Us",
+        "subtitle": "Multiple locations worldwide"
+      },
+      "support": {
+        "title": "Need Immediate Assistance?",
+        "subtitle": "Our support team is available 24/7 to help you with urgent inquiries and support needs.",
+        "button": "Get Instant Support"
+      }
+    }
+  },
+  "footer": {
+    "companyName": "iBTIKAR IT SOLUTIONS",
+    "description": "Your trusted partner for IT solutions and specialized e-commerce logistics services. We deliver excellence in connecting Mauritanian customers to global e-commerce platforms with commitment and professionalism.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "copyright": "All rights reserved."
+  },
+  "language": {
+    "en": "US English",
+    "fr": "FR Français"
+  }
+}

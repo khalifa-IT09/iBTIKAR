@@ -1,17 +1,16 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { useScrollToSection } from '../hooks/useScrollToSection';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Hero() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const { scrollToSection } = useScrollToSection();
+  const { t, isRTL } = useLanguage();
 
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-700"
+      dir={isRTL ? 'rtl' : 'ltr'}
     >
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00em0wIDI0YzAtMi4yMSAxLjc5LTQgNC00czQgMS43OSA0IDQtMS43OSA0LTQgNC00LTEuNzktNC00ek0xMiAxNmMwLTIuMjEgMS43OS00IDQtNHM0IDEuNzkgNCA0LTEuNzkgNC00IDQtNC0xLjc5LTQtNHptMCAyNGMwLTIuMjEgMS43OS00IDQtNHM0IDEuNzkgNCA0LTEuNzkgNC00IDQtNC0xLjc5LTQtNHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
 
@@ -20,43 +19,45 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-white/20">
           <Sparkles size={16} className="text-cyan-300" />
-          <span className="text-white text-sm font-medium">Your Trusted Service Partner</span>
+          <span className="text-white text-sm font-medium">{t('hero.tagline')}</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Welcome to
-          <span className="block bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
-            Khalifa Groupe Services
-          </span>
-        </h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              {t('hero.welcome')}
+              <span className="block bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
+                {t('hero.companyName')}
+              </span>
+            </h1>
 
-        <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Delivering Excellence in IT Solutions, Logistics Services, and International Trade
-        </p>
+            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">
+              {t('hero.subtitle')}
+            </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => scrollToSection('services')}
             className="group px-8 py-4 bg-white text-blue-900 rounded-lg font-semibold hover:bg-blue-50 transition-all hover:shadow-xl hover:scale-105 flex items-center justify-center space-x-2"
+            aria-label="Explore our services"
           >
-            <span>Explore Services</span>
+            <span>{t('hero.exploreServices')}</span>
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </button>
           <button
             onClick={() => scrollToSection('contact')}
             className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-all backdrop-blur-sm"
+            aria-label="Get in touch with us"
           >
-            Get in Touch
+            {t('hero.getInTouch')}
           </button>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-          {[
-            { number: '500+', label: 'Projects Completed' },
-            { number: '15+', label: 'Years Experience' },
-            { number: '100+', label: 'Happy Clients' },
-            { number: '24/7', label: 'Support Available' },
-          ].map((stat, index) => (
+            <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {[
+                { number: '25+', label: t('hero.stats.projects') },
+                { number: '5+', label: t('hero.stats.years') },
+                { number: '100+', label: t('hero.stats.clients') },
+                { number: '24/7', label: t('hero.stats.support') },
+              ].map((stat, index) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all"
