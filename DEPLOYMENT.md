@@ -10,9 +10,9 @@ This project is ready for deployment on Render. Follow these steps:
 
 ### 2. Render Configuration
 - **Build Command**: `npm run build`
-- **Publish Directory**: `dist`
+- **Start Command**: `npm start`
 - **Node Version**: 18.x or higher
-- **Environment**: Static Site
+- **Environment**: Web Service (not Static Site)
 
 ### 3. Environment Variables (Optional)
 The project works without environment variables, but you can add:
